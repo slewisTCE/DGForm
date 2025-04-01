@@ -1,64 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Form with Live Update</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Live Form Choices</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f9f9f9, #e0f7fa);
+      padding: 40px;
+      margin: 0;
+      color: #333;
+    }
+
+    .form-container {
+      background: #fff;
       max-width: 600px;
       margin: auto;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      animation: fadeIn 0.6s ease-out;
     }
-    label, select, input {
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #00796B;
+    }
+
+    label {
+      font-weight: bold;
+      margin-top: 15px;
       display: block;
-      margin-bottom: 15px;
     }
+
+    select, input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+
     .result-box {
       margin-top: 30px;
-      padding: 15px;
-      border: 1px solid #ccc;
-      background: #f9f9f9;
+      padding: 20px;
+      border: 2px dashed #00796B;
+      border-radius: 10px;
+      background-color: #E0F2F1;
       font-size: 18px;
+      min-height: 60px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
 
-  <h2>Interactive Form</h2>
+  <div class="form-container">
+    <h2>Custom Combo Selector</h2>
 
-  <label for="textEntry">Enter a string:</label>
-  <input type="text" id="textEntry" placeholder="Type something here">
+    <label for="textEntry">Enter your label text:</label>
+    <input type="text" id="textEntry" placeholder="Type your label..." />
 
-  <label for="choice1">Choice 1:</label>
-  <select id="choice1">
-    <option value="">Select an option</option>
-    <option value="A">A</option>
-    <option value="B">B</option>
-    <option value="C">C</option>
-    <option value="D">D</option>
-  </select>
+    <label for="choice1">Select Option 1:</label>
+    <select id="choice1">
+      <option value="">Choose</option>
+      <option value="A">A</option>
+      <option value="B">B</option>
+      <option value="C">C</option>
+      <option value="D">D</option>
+    </select>
 
-  <label for="choice2">Choice 2:</label>
-  <select id="choice2">
-    <option value="">Select an option</option>
-    <option value="A">A</option>
-    <option value="B">B</option>
-    <option value="C">C</option>
-    <option value="D">D</option>
-  </select>
+    <label for="choice2">Select Option 2:</label>
+    <select id="choice2">
+      <option value="">Choose</option>
+      <option value="A">A</option>
+      <option value="B">B</option>
+      <option value="C">C</option>
+      <option value="D">D</option>
+    </select>
 
-  <label for="choice3">Choice 3:</label>
-  <select id="choice3">
-    <option value="">Select an option</option>
-    <option value="A">A</option>
-    <option value="B">B</option>
-    <option value="C">C</option>
-    <option value="D">D</option>
-  </select>
+    <label for="choice3">Select Option 3:</label>
+    <select id="choice3">
+      <option value="">Choose</option>
+      <option value="A">A</option>
+      <option value="B">B</option>
+      <option value="C">C</option>
+      <option value="D">D</option>
+    </select>
 
-  <div class="result-box" id="resultBox">
-    Please select all options and enter text.
+    <div class="result-box" id="resultBox">
+      Please select options and enter a label.
+    </div>
   </div>
 
   <script>
@@ -76,18 +116,18 @@
 
       if (val1 && val2 && val3) {
         resultBox.innerHTML = `
-          <strong>Selected Combo:</strong> ${val1}${val2}${val3}<br>
-          <strong>Text Entry:</strong> ${textVal}
+          <strong>Selected Combo:</strong> <span style="color:#004D40;">${val1}${val2}${val3}</span><br>
+          <strong>Label:</strong> ${textVal || '<i>No text entered</i>'}
         `;
       } else {
-        resultBox.textContent = "Please select all options and enter text.";
+        resultBox.innerHTML = `<em>Please select all options and enter a label.</em>`;
       }
     }
 
-    choice1.addEventListener("change", updateResult);
-    choice2.addEventListener("change", updateResult);
-    choice3.addEventListener("change", updateResult);
-    textEntry.addEventListener("input", updateResult);
+    [choice1, choice2, choice3, textEntry].forEach(el => {
+      el.addEventListener("change", updateResult);
+      el.addEventListener("input", updateResult);
+    });
   </script>
 
 </body>
