@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form with Live Update</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+    label, select, input {
+      display: block;
+      margin-bottom: 15px;
+    }
+    .result-box {
+      margin-top: 30px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      background: #f9f9f9;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Interactive Form</h2>
+
+  <label for="textEntry">Enter a string:</label>
+  <input type="text" id="textEntry" placeholder="Type something here">
+
+  <label for="choice1">Choice 1:</label>
+  <select id="choice1">
+    <option value="">Select an option</option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <option value="D">D</option>
+  </select>
+
+  <label for="choice2">Choice 2:</label>
+  <select id="choice2">
+    <option value="">Select an option</option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <option value="D">D</option>
+  </select>
+
+  <label for="choice3">Choice 3:</label>
+  <select id="choice3">
+    <option value="">Select an option</option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <option value="D">D</option>
+  </select>
+
+  <div class="result-box" id="resultBox">
+    Please select all options and enter text.
+  </div>
+
+  <script>
+    const choice1 = document.getElementById("choice1");
+    const choice2 = document.getElementById("choice2");
+    const choice3 = document.getElementById("choice3");
+    const textEntry = document.getElementById("textEntry");
+    const resultBox = document.getElementById("resultBox");
+
+    function updateResult() {
+      const val1 = choice1.value;
+      const val2 = choice2.value;
+      const val3 = choice3.value;
+      const textVal = textEntry.value;
+
+      if (val1 && val2 && val3) {
+        resultBox.innerHTML = `
+          <strong>Selected Combo:</strong> ${val1}${val2}${val3}<br>
+          <strong>Text Entry:</strong> ${textVal}
+        `;
+      } else {
+        resultBox.textContent = "Please select all options and enter text.";
+      }
+    }
+
+    choice1.addEventListener("change", updateResult);
+    choice2.addEventListener("change", updateResult);
+    choice3.addEventListener("change", updateResult);
+    textEntry.addEventListener("input", updateResult);
+  </script>
+
+</body>
+</html>
