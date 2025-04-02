@@ -173,34 +173,29 @@
     const allOptions = ["A", "B", "C", "D"];
 
     function updateChoice3() {
-      const selected = choice1.value;
+      const index = choice1.selectedIndex;
       choice3.innerHTML = "<option value=''>Choose</option>";
-      if (!selected) return;
+      
+      // Index 0 is the default "Choose" option
+      if (index <= 0) return;
 
-      if (selected == "A") {
-        choice3.appendChild("AAA");
-        choice3.appendChild("AA");
-      } else if (selected == "B") {
-        choice3.appendChild("BBB");
-        choice3.appendChild("BB");
-      } else if (selected == "C") {
-        choice3.appendChild("CCC");
-        choice3.appendChild("CC");
-      } else if (selected == "D") {
-        choice3.appendChild("DDD");
-        choice3.appendChild("DD");
-      }
+      const optionSets = [
+        ["AAA", "AA"],  // Index 1 → A
+        ["BBB", "BB"],  // Index 2 → B
+        ["CCC", "CC"],  // Index 3 → C
+        ["DDD", "DD"]   // Index 4 → D
+      ];
 
-/*       
-      const limit = allOptions.indexOf(selected);
-      const filtered = allOptions.slice(0, limit + 1);
-      filtered.forEach(opt => {
-        const option = document.createElement("option");
-        option.value = opt;
-        option.textContent = opt;
-        choice3.appendChild(option);
-      }); */
+      const selectedOptions = optionSets[index - 1]; // Adjust for 0-based array
+
+      selectedOptions.forEach(text => {
+        const opt = document.createElement("option");
+        opt.value = text;
+        opt.textContent = text;
+        choice3.appendChild(opt);
+      });
     }
+
 
     function getSelectedRadio() {
       for (let r of radios) {
