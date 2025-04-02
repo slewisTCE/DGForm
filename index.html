@@ -15,7 +15,7 @@
 
     .form-container {
       background: #fff;
-      max-width: 600px;
+      max-width: 700px;
       margin: auto;
       padding: 30px;
       border-radius: 12px;
@@ -35,7 +35,7 @@
       display: block;
     }
 
-    select, input[type="text"] {
+    select, input[type="text"], textarea {
       width: 100%;
       padding: 10px;
       margin-top: 5px;
@@ -53,6 +53,14 @@
       background-color: #E0F2F1;
       font-size: 18px;
       min-height: 60px;
+    }
+
+    .checkbox, .radio-group {
+      margin-top: 10px;
+    }
+
+    .radio-group label {
+      margin-right: 20px;
     }
 
     @keyframes fadeIn {
@@ -96,8 +104,22 @@
       <option value="D">D</option>
     </select>
 
+    <label for="extraText">Additional notes (4 rows):</label>
+    <textarea id="extraText" rows="4" placeholder="Enter more details..."></textarea>
+
+    <div class="checkbox">
+      <input type="checkbox" id="acknowledge" />
+      <label for="acknowledge"> I acknowledge the terms.</label>
+    </div>
+
+    <div class="radio-group">
+      <label>Are you satisfied?</label>
+      <label><input type="radio" name="satisfaction" value="Yes" /> Yes</label>
+      <label><input type="radio" name="satisfaction" value="No" /> No</label>
+    </div>
+
     <div class="result-box" id="resultBox">
-      Please select options and enter a label.
+      Please complete the form to see results.
     </div>
   </div>
 
@@ -106,25 +128,41 @@
     const choice2 = document.getElementById("choice2");
     const choice3 = document.getElementById("choice3");
     const textEntry = document.getElementById("textEntry");
+    const extraText = document.getElementById("extraText");
+    const acknowledge = document.getElementById("acknowledge");
+    const radios = document.getElementsByName("satisfaction");
     const resultBox = document.getElementById("resultBox");
+
+    function getSelectedRadio() {
+      for (let r of radios) {
+        if (r.checked) return r.value;
+      }
+      return null;
+    }
 
     function updateResult() {
       const val1 = choice1.value;
       const val2 = choice2.value;
       const val3 = choice3.value;
-      const textVal = textEntry.value;
+      const labelText = textEntry.value;
+      const noteText = extraText.value;
+      const isAcknowledged = acknowledge.checked;
+      const satisfaction = getSelectedRadio();
 
       if (val1 && val2 && val3) {
         resultBox.innerHTML = `
           <strong>Selected Combo:</strong> <span style="color:#004D40;">${val1}${val2}${val3}</span><br>
-          <strong>Label:</strong> ${textVal || '<i>No text entered</i>'}
+          <strong>Label:</strong> ${labelText || '<i>No text entered</i>'}<br>
+          <strong>Notes:</strong> ${noteText || '<i>No additional notes</i>'}<br>
+          <strong>Acknowledged:</strong> ${isAcknowledged ? '✅ Yes' : '❌ No'}<br>
+          <strong>Satisfaction:</strong> ${satisfaction || '<i>Not selected</i>'}
         `;
       } else {
-        resultBox.innerHTML = `<em>Please select all options and enter a label.</em>`;
+        resultBox.innerHTML = `<em>Please select all options and fill in the required fields.</em>`;
       }
     }
 
-    [choice1, choice2, choice3, textEntry].forEach(el => {
+    [choice1, choice2, choice3, textEntry, extraText, acknowledge, ...radios].forEach(el => {
       el.addEventListener("change", updateResult);
       el.addEventListener("input", updateResult);
     });
