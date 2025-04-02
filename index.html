@@ -151,13 +151,18 @@ Lithium Content = (Ah per cell x 0.3 x no. of cells) OR (mAh / 1000 x 0.3 x no. 
       <option value="F">UN3091 Lithium Metal Batteries Packed with Equipment (upto 3 per item)</option>
     </select>
 
-    <label for="choice2">Select Option 2:</label>
-    <select id="choice2">
-      <option value="">Choose</option>
-      <option value="A">A</option>
-      <option value="B">B</option>
-      <option value="C">C</option>
-      <option value="D">D</option>
+    <label for="wattHours">WATT Hours (per item):</label>
+    <select id="wattHours">
+      <option value="">Choose the appropriate Wh (Ah x V = Wh)</option>
+      <option value="A">Battery ≤ 100 Wh / Cells ≤ 20 Wh</option>
+      <option value="B">Battery > 100 Wh / Cells > 20 Wh</option>
+    </select>
+
+    <label for="aggContent">Battery aggregate and Cell metal content:</label>
+    <select id="aggContent">
+      <option value="">Choose the appropriate Lithum Metal content</option>
+      <option value="A">Battery ≤ 2 g / Cells ≤ 1 g</option>
+      <option value="B">Battery > 2 g / Cells > 1 g</option>
     </select>
 
     <label for="choice3">Select Option 3:</label>
