@@ -76,7 +76,11 @@ input[type="number"] {
 
 .placeholder {
   visibility: hidden;
-  width: 20px;
+}
+
+.block {
+  visibility: hidden;
+  width: 10px;
 }
 
 .textarea-group {
@@ -118,7 +122,7 @@ textarea {
 
 .checkbox {
   margin-top: 10px;
-  width: 20px;
+  width: 10px;
 }
 
 .checkbox .normal-text {
