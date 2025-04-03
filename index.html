@@ -66,7 +66,12 @@
     	display: flex;
     	gap: 20px;
     	justify-content: space-between;
+      flex-wrap: wrap;
   	}
+
+    .placeholder {
+      visibility: hidden;
+    }
 
   	.textarea-group {
     	flex: 1;
@@ -216,6 +221,10 @@ Lithium Content = (Ah per cell x 0.3 x no. of cells) OR (mAh / 1000 x 0.3 x no. 
             <input type="checkbox" id="cao_check" />
           </label>
         </div>
+
+        <div class="checkbox placeholder"></div>
+        <div class="checkbox placeholder"></div>
+
       </div>
 	  
     <label for="choice3">Select Option 3:</label>
