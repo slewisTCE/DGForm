@@ -76,6 +76,7 @@ input[type="number"] {
 
 .placeholder {
   visibility: hidden;
+  width: 20px;
 }
 
 .textarea-group {
@@ -117,7 +118,7 @@ textarea {
 
 .checkbox {
   margin-top: 10px;
-  width: 5%;
+  width: 20px;
 }
 
 .checkbox .normal-text {
@@ -134,7 +135,6 @@ textarea {
 }
 
 .radio-group .normal-text {
-  width: 85%;
   flex: 1;
   font-weight: normal;
   display: inline;
