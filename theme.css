@@ -111,6 +111,17 @@ textarea {
   font-size: 18px;
 }
 
+.notice-box {
+  font-weight: bold;
+  margin-top: 30px;
+  padding: 20px;
+  border: 2px line #790000;
+  border-radius: 10px;
+  background-color: #f2e0e0;
+  font-size: 18px;
+  color: #790000;
+}
+
 .dark-mode .result-box {
   background-color: #1c3a3a;
   border-color: #00c2a6;
