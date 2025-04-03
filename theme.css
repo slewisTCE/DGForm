@@ -122,7 +122,6 @@ textarea {
 }
 
 .radio-line label {
-  width: 85%;
   display: flex;
   align-items: flex-start;
   gap: 8px;
@@ -130,6 +129,7 @@ textarea {
 }
 
 .radio-line .normal-text {
+  width: 85%;
   flex: 1;
   font-weight: normal;
   display: inline;
