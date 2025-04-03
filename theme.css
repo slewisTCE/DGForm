@@ -113,13 +113,24 @@ textarea {
 
 .notice-box {
   font-weight: bold;
+  text-align: center;
   margin-top: 30px;
   padding: 20px;
-  border: 2px solid #b60101;
+  border: 2px solid #d40202;
   border-radius: 10px;
-  background-color: #f2e0e0;
-  font-size: 12px;
-  color: #b60101;
+  background-color: #ffd0d0;
+  font-size: 14px;
+  color: #d40202;
+}
+
+.disclaimer-box {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px;
+  border: 2px solid #121212;
+  border-radius: 10px;
+  background-color: #bbbbbb;
 }
 
 .dark-mode .result-box {
