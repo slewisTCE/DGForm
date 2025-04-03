@@ -80,7 +80,7 @@ input[type="number"] {
 
 .radio-group .block {
   visibility: hidden;
-  width: 10px;
+  width: 5%;
 }
 
 .textarea-group {
@@ -126,7 +126,7 @@ textarea {
 
 .radio-group .checkbox {
   margin-top: 10px;
-  width: 10px;
+  width: 5%;
 }
 
 .checkbox .normal-text {
