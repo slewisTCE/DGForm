@@ -111,8 +111,13 @@ textarea {
   border-color: #00c2a6;
 }
 
-.checkbox, .radio-group {
+.radio-group {
   margin-top: 10px;
+}
+
+.checkbox {
+  margin-top: 10px;
+  width: 5%;
 }
 
 .checkbox .normal-text {
