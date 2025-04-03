@@ -122,17 +122,18 @@ textarea {
 }
 
 .radio-line label {
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-    flex-wrap: wrap;
+  width: 85%;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
 .radio-line .normal-text {
-    flex: 1;
-    font-weight: normal;
-    display: inline;
-    margin: 0;
+  flex: 1;
+  font-weight: normal;
+  display: inline;
+  margin: 0;
   }
 
 .dark-toggle {
