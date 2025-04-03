@@ -129,7 +129,15 @@ textarea {
   padding: 20px;
   border: 2px solid #121212;
   border-radius: 10px;
-  background-color: #bbbbbb;
+  background-color: #d8d8d8;
+}
+
+.total-box {
+  margin-top: 30px;
+  padding: 20px;
+  border: 2px solid #ffd035;
+  border-radius: 10px;
+  background-color: #ffeaa7;
 }
 
 .dark-mode .result-box {

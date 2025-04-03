@@ -107,9 +107,11 @@ Lithium Content = (Ah per cell x 0.3 x no. of cells) OR (mAh / 1000 x 0.3 x no. 
 
     </div>
 
-    <label for="totalWeight_txt">Total Lithium Ion/Metal Battery Weight per package: 
-      <input type="number" id="totalWeight_txt" placeholder="Kilograms..." />
-    </label>
+    <div class="total-box" id="totalBox"></div>
+      <label for="totalWeight_txt">Total Lithium Ion/Metal Battery Weight per package: 
+        <input type="number" id="totalWeight_txt" placeholder="Kilograms..." />
+      </label>
+    </div>
     
     <div class="notice-box" id="noticeBox">
       NOTE: LITHIUM ION and LITHIUM METAL are not to be packed in the same container
@@ -120,7 +122,9 @@ Lithium Content = (Ah per cell x 0.3 x no. of cells) OR (mAh / 1000 x 0.3 x no. 
     <div class="disclaimer-box" id="disclaimerBox">
       <div class="radio-group">
         <label for="disclaimKey">
-          [Y]      [N/A]
+          [Y]
+          <div class="block"></div>
+          [N/A]
         </label>
 
         <label>
