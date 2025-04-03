@@ -121,14 +121,14 @@ textarea {
   margin: 0;
 }
 
-.radio-line label {
+.radio-group label {
   display: flex;
   align-items: flex-start;
   gap: 8px;
   flex-wrap: wrap;
 }
 
-.radio-line .normal-text {
+.radio-group .normal-text {
   width: 85%;
   flex: 1;
   font-weight: normal;
