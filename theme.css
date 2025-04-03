@@ -80,7 +80,7 @@ input[type="number"] {
 
 .radio-group .block {
   visibility: hidden;
-  width: 8px;
+  width: 9px;
 }
 
 .textarea-group {
