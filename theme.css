@@ -79,14 +79,14 @@ input[type="number"] {
 }
 
 .textarea-group {
-flex: 1;
-display: flex;
-flex-direction: column;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }	
 
 textarea {
-resize: vertical;
-min-height: 100px;
+    resize: vertical;
+    min-height: 100px;
 }
     
 .dark-mode select,
@@ -129,11 +129,14 @@ min-height: 100px;
     display: flex;
     align-items: flex-start;
     gap: 8px;
-    flex-wrap: wrap; /* Optional if you want text to wrap on smaller screens */
+    flex-wrap: wrap;
 }
 
 .radio-line .normal-text {
-    flex: 1; /* allows text to use remaining space */
+    flex: 1;
+    font-weight: normal;
+    display: inline;
+    margin: 0;
   }
 
 .dark-toggle {
