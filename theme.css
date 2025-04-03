@@ -121,10 +121,6 @@ textarea {
   margin: 0;
 }
 
-.radio-group label {
-  margin-right: 20px;
-}
-
 .radio-line label {
     display: flex;
     align-items: flex-start;
