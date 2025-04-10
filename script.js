@@ -1,16 +1,39 @@
-    const choice1 = document.getElementById("choice1");
-    const choice2 = document.getElementById("choice2");
-    const choice3 = document.getElementById("choice3");
-    const textEntry = document.getElementById("textEntry");
-    const extraText = document.getElementById("extraText");
-    const acknowledge = document.getElementById("acknowledge");
-    const radios = document.getElementsByName("satisfaction");
-    const resultBox = document.getElementById("resultBox");
-    const toggleDarkMode = document.getElementById("toggleDarkMode");
-    const body = document.body;
 
-    const allOptions = ["A", "B", "C", "D"];
+const toggleDarkMode = document.getElementById("toggleDarkMode");
+const shipper_text = document.getElementById("shipper_text");
+const consignee_text = document.getElementById("consignee_text");
+const dep_text = document.getElementById("dep_text");
+const arv_text = document.getElementById("arv_text");
+const item_text = document.getElementById("item_text");
+const batteryType = document.getElementById("batteryType");
+const wattHours = document.getElementById("wattHours");
+const aggContent = document.getElementById("aggContent");
+const paxCargo_output = document.getElementById("paxCargo_output");
+const paxCargo_check = document.getElementById("paxCargo_check");
+const cao_output = document.getElementById("cao_output");
+const cao_check = document.getElementById("cao_check");
+const totalBox = document.getElementById("totalBox");
+const totalWeight_txt = document.getElementById("totalWeight_txt");
+const noticeBox = document.getElementById("noticeBox");
+const disclaimerBox = document.getElementById("disclaimerBox");
 
+const disclaimKey = document.getElementById("disclaimKey");
+const disclaim_A = document.getElementById("disclaim_A");
+const disclaim_B = document.getElementById("disclaim_B");
+const disclaim_C = document.getElementById("disclaim_C");
+const disclaim_D = document.getElementById("disclaim_D");
+const disclaim_E = document.getElementById("disclaim_E");
+const disclaim_F = document.getElementById("disclaim_F");
+const disclaim_G = document.getElementById("disclaim_G");
+const disclaim_H = document.getElementById("disclaim_H");
+const disclaim_I = document.getElementById("disclaim_I");
+const disclaim_J = document.getElementById("disclaim_J");
+const disclaim_K = document.getElementById("disclaim_K");
+const footerNoticeBox = document.getElementById("footerNoticeBox");
+const body = document.body;
+
+
+/*
     function updateChoice3() {
       const index = choice1.selectedIndex;
       choice3.innerHTML = "<option value=''>Choose</option>";
@@ -82,3 +105,4 @@
 
     // Initialize dropdown
     updateChoice3();
+*/
