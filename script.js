@@ -6,7 +6,9 @@ const dep_text = document.getElementById("dep_text");
 const arv_text = document.getElementById("arv_text");
 const item_text = document.getElementById("item_text");
 const batteryType = document.getElementById("batteryType");
+const wattHoursObjects = document.getElementById("wattHoursObjects")
 const wattHours = document.getElementById("wattHours");
+const aggContentObjects = document.getElementById("aggContentObjects")
 const aggContent = document.getElementById("aggContent");
 const paxCargo_output = document.getElementById("paxCargo_output");
 const paxCargo_check = document.getElementById("paxCargo_check");
@@ -35,22 +37,22 @@ const body = document.body;
 document.addEventListener('DOMContentLoaded', function() {
   batteryType.addEventListener('change', function() {
     if (batteryType.value === "A" || batteryType.value === "B" || batteryType.value === "C") {  
+      wattHoursObjects.hidden = false;
       wattHours.disabled = false;
-      wattHours.hidden = false;
+      aggContentObjects.hidden = true;
       aggContent.disabled = true;  
-      aggContent.hidden = true;
 
     } else if (batteryType.value === "D" || batteryType.value === "E" || batteryType.value === "F") {  
+      wattHoursObjects.hidden = true;
       wattHours.disabled = true;
-      wattHours.hidden = true;
+      aggContentObjects.hidden = false;
       aggContent.disabled = false;  
-      aggContent.hidden = false;
-      
+
     } else {  
-      wattHours.disabled = false;
-      wattHours.hidden = false;
-      aggContent.disabled = false;  
-      aggContent.hidden = false;
+      wattHoursObjects.hidden = true;
+      wattHours.disabled = true;
+      aggContentObjects.hidden = true;
+      aggContent.disabled = true;  
 
     };
 

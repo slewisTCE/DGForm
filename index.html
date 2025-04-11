@@ -58,6 +58,7 @@ Address Line 3"></textarea>
     <textarea id="item_text" rows="4" placeholder="Item/s Description (inc Wh and Lithium content per item)
 Lithium Content = (Ah per cell x 0.3 x no. of cells) OR (mAh / 1000 x 0.3 x no. of cells)"></textarea>
 
+  
     <label for="batteryType">Battery Type:</label>
     <select id="batteryType">
       <option value="">Choose Battery Type</option>
@@ -69,19 +70,23 @@ Lithium Content = (Ah per cell x 0.3 x no. of cells) OR (mAh / 1000 x 0.3 x no. 
       <option value="F">UN3091 Lithium Metal Batteries Packed with Equipment (upto 3 per item)</option>
     </select>
 
-    <label for="wattHours">WATT Hours (per item):</label>
-    <select id="wattHours">
-      <option value="">Choose the appropriate Wh (Ah x V = Wh)</option>
-      <option value="A">Battery ≤ 100 Wh / Cells ≤ 20 Wh</option>
-      <option value="B">Battery > 100 Wh / Cells > 20 Wh</option>
-    </select>
+    <div id="wattHoursObjects">
+      <label for="wattHours">WATT Hours (per item):</label>
+      <select id="wattHours">
+        <option value="">Choose the appropriate Wh (Ah x V = Wh)</option>
+        <option value="A">Battery ≤ 100 Wh / Cells ≤ 20 Wh</option>
+        <option value="B">Battery > 100 Wh / Cells > 20 Wh</option>
+      </select>
+    </div>
 
-    <label for="aggContent">Battery aggregate and Cell metal content:</label>
-    <select id="aggContent">
-      <option value="">Choose the appropriate Lithum Metal content</option>
-      <option value="A">Battery ≤ 2 g / Cells ≤ 1 g</option>
-      <option value="B">Battery > 2 g / Cells > 1 g</option>
-    </select>
+    <div id="aggContentObjects">
+      <label for="aggContent">Battery aggregate and Cell metal content:</label>
+      <select id="aggContent">
+        <option value="">Choose the appropriate Lithum Metal content</option>
+        <option value="A">Battery ≤ 2 g / Cells ≤ 1 g</option>
+        <option value="B">Battery > 2 g / Cells > 1 g</option>
+      </select>
+    </div>
 
     <label for="weightAC_label">Weight and Aircraft:</label>
     <div class="side-by-side">
