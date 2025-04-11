@@ -35,10 +35,6 @@ const footerNoticeBox = document.getElementById("footerNoticeBox");
 const body = document.body;
 
 document.addEventListener('DOMContentLoaded', function() {
-  wattHoursObjects.hidden = true;
-  aggContentObjects.hidden = true;
-  
-
   batteryType.addEventListener('change', function() {
     if (batteryType.value === "A" || batteryType.value === "B" || batteryType.value === "C") {  
       wattHoursObjects.hidden = false;
@@ -61,6 +57,10 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
   });
+
+  wattHoursObjects.hidden = true;
+  aggContentObjects.hidden = true;
+  
 });
 
 /*
