@@ -58,9 +58,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   });
 
-  wattHoursObjects.hidden = true;
-  aggContentObjects.hidden = true;
-  
 });
 
 /*
