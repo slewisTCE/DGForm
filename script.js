@@ -32,6 +32,12 @@ const disclaim_K = document.getElementById("disclaim_K");
 const footerNoticeBox = document.getElementById("footerNoticeBox");
 const body = document.body;
 
+batteryType.addEventListener('change', function() {
+  if (batteryType.value === "A" || batteryType.value === "B" || batteryType.value === "C") {  
+    wattHours.enabled = true;  
+    aggContent.enabled = false;  
+  }
+});
 
 /*
     function updateChoice3() {
