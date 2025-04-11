@@ -34,12 +34,11 @@ const disclaim_K = document.getElementById("disclaim_K");
 const footerNoticeBox = document.getElementById("footerNoticeBox");
 const body = document.body;
 
-
-wattHoursObjects.hidden = true;
-aggContentObjects.hidden = true;
-
-
 document.addEventListener('DOMContentLoaded', function() {
+  wattHoursObjects.hidden = true;
+  aggContentObjects.hidden = true;
+  
+
   batteryType.addEventListener('change', function() {
     if (batteryType.value === "A" || batteryType.value === "B" || batteryType.value === "C") {  
       wattHoursObjects.hidden = false;
