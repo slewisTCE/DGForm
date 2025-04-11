@@ -35,9 +35,25 @@ const body = document.body;
 document.addEventListener('DOMContentLoaded', function() {
   batteryType.addEventListener('change', function() {
     if (batteryType.value === "A" || batteryType.value === "B" || batteryType.value === "C") {  
-      wattHours.disabled = false;  
+      wattHours.disabled = false;
+      wattHours.hidden = false;
       aggContent.disabled = true;  
-    }
+      aggContent.hidden = true;
+
+    } else if (batteryType.value === "D" || batteryType.value === "E" || batteryType.value === "F") {  
+      wattHours.disabled = true;
+      wattHours.hidden = true;
+      aggContent.disabled = false;  
+      aggContent.hidden = false;
+      
+    } else {  
+      wattHours.disabled = false;
+      wattHours.hidden = false;
+      aggContent.disabled = false;  
+      aggContent.hidden = false;
+
+    };
+
   });
 });
 
