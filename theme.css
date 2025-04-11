@@ -89,10 +89,6 @@ input[type="number"] {
   flex-direction: column;
 }	
 
-.wattHoursObjects, .aggContentObjects {
-  visibility: hidden;
-}
-
 textarea {
     resize: vertical;
     min-height: 100px;
