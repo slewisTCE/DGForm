@@ -2,18 +2,18 @@
 const toggleDarkMode = document.getElementById("toggleDarkMode");
 const shipper_text = document.getElementById("shipper_text");
 const consignee_text = document.getElementById("consignee_text");
-const dep_text = document.getElementById("dep_text");
-const arv_text = document.getElementById("arv_text");
+const depText = document.getElementById("depText");
+const arvText = document.getElementById("arvText");
 const item_text = document.getElementById("item_text");
 const batteryType = document.getElementById("batteryType");
 const wattHoursObjects = document.getElementById("wattHoursObjects")
 const wattHours = document.getElementById("wattHours");
 const aggContentObjects = document.getElementById("aggContentObjects")
 const aggContent = document.getElementById("aggContent");
-const paxCargo_output = document.getElementById("paxCargo_output");
-const paxCargo_check = document.getElementById("paxCargo_check");
-const cao_output = document.getElementById("cao_output");
-const cao_check = document.getElementById("cao_check");
+const paxCargoOutput = document.getElementById("paxCargoOutput");
+const paxCargoCheck = document.getElementById("paxCargoCheck");
+const caoOutput = document.getElementById("caoOutput");
+const caoCheck = document.getElementById("caoCheck");
 const totalBox = document.getElementById("totalBox");
 const totalWeight_txt = document.getElementById("totalWeight_txt");
 const noticeBox = document.getElementById("noticeBox");
@@ -35,7 +35,7 @@ const disclaim_K = document.getElementById("disclaim_K");
 const footerNoticeBox = document.getElementById("footerNoticeBox");
 const body = document.body;
 
-// Weight and Cargo handler
+
 
 document.addEventListener('DOMContentLoaded', function() {
   
@@ -43,10 +43,17 @@ document.addEventListener('DOMContentLoaded', function() {
     if (batteryType.value === "A" || batteryType.value === "B" || batteryType.value === "C") {  
       makeupObjects.hidden = false;
       makeupTitle.innerText = "WATT Hours (per item):";
+      clearSelectOptions("makeup")
+      const newOptions =[
+        { value: "", label: "Choose the appropriate Wh (Ah x V = Wh)"},
+        { value: "A", label: "Battery ≤ 100 Wh / Cells ≤ 20 Wh"},
+        { value: "B", label: "Battery > 100 Wh / Cells > 20 Wh"}
+      ];
 
     } else if (batteryType.value === "D" || batteryType.value === "E" || batteryType.value === "F") {  
       makeupObjects.hidden = false;
       makeupTitle.innerText = "Content - Battery aggregate and Cell metal:";
+      clearSelectOptions("makeup")
 
     } else {  
       makeupObjects.hidden = true;
@@ -56,6 +63,26 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
 });
+
+function clearSelectOptions(selectId) {
+  const select = document.getElementById(selectId);
+  if (select) {
+      select.innerHTML = ''; // remove all <option> elements
+  }
+}
+
+function addSelectOptions(selectId, optionsArray) {
+  const select = document.getElementById(selectId);
+  if (select) {
+      optionsArray.forEach(opt => {
+          const option = document.createElement('option');
+          option.value = opt.value;
+          option.text = opt.label;
+          select.appendChild(option);
+      });
+  }
+}
+
 
 /*
     function updateChoice3() {

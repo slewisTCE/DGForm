@@ -45,11 +45,11 @@ Address Line 3"></textarea>
 
 <div class="side-by-side">
 	<div class="textarea-group">
-    <label for="dep_text">Departing Airport:</label>
+    <label for="depText">Departing Airport:</label>
     <input type="text" id="dep_text" placeholder="..." />
 	</div>
 	<div class="textarea-group">
-    <label for="arv_text">Arriving Airport:</label>
+    <label for="arvText">Arriving Airport:</label>
     <input type="text" id="arv_text" placeholder="..." />
 	</div>
 </div>
@@ -73,34 +73,33 @@ Lithium Content = (Ah per cell x 0.3 x no. of cells) OR (mAh / 1000 x 0.3 x no. 
     <div id="makeupObjects" hidden>
       <label for="makeup"><div id="makeupTitle">holder</div></label>
       <select id="makeup">
-        <option value="">Choose the appropriate Wh (Ah x V = Wh)</option>
-        <option value="A">Battery ≤ 100 Wh / Cells ≤ 20 Wh</option>
-        <option value="B">Battery > 100 Wh / Cells > 20 Wh</option>
       </select>
     </div>
 
-    <label for="weightAC_label">Weight and Aircraft:</label>
-    <div class="side-by-side">
-      <div class="checkbox">
-        <label for="paxCargo_check">
-          PAX/Cargo:
-          <p id="paxCargo_output" class="normal-text">Holder</p>
-          <input type="checkbox" id="paxCargo_check" />
-        </label>
+    <div id="weightObjects" hidden>
+      <label for="weightAC_label">Weight and Aircraft:</label>
+      <div class="side-by-side">
+        <div class="checkbox">
+          <label for="paxCargoCheck">
+            PAX/Cargo:
+            <p id="paxCargoOutput" class="normal-text">Holder</p>
+            <input type="checkbox" id="paxCargoCheck" />
+          </label>
+        </div>
+      
+
+        <div class="checkbox">
+          <label for="caoCheck">
+            CAO:
+            <p id="caoOutput" class="normal-text">Holder</p>
+            <input type="checkbox" id="caoCheck" />
+          </label>
+        </div>
+
+        <div class="checkbox placeholder"></div>
+        <div class="checkbox placeholder"></div>
+        <div class="checkbox placeholder"></div>
       </div>
-
-      <div class="checkbox">
-        <label for="cao_check">
-          CAO:
-          <p id="cao_output" class="normal-text">Holder</p>
-          <input type="checkbox" id="cao_check" />
-        </label>
-      </div>
-
-      <div class="checkbox placeholder"></div>
-      <div class="checkbox placeholder"></div>
-      <div class="checkbox placeholder"></div>
-
     </div>
 
     <div class="total-box" id="totalBox">
