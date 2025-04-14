@@ -34,26 +34,19 @@ const disclaim_K = document.getElementById("disclaim_K");
 const footerNoticeBox = document.getElementById("footerNoticeBox");
 const body = document.body;
 
+// Weight and Cargo handler
+
 document.addEventListener('DOMContentLoaded', function() {
   batteryType.addEventListener('change', function() {
     if (batteryType.value === "A" || batteryType.value === "B" || batteryType.value === "C") {  
-      wattHoursObjects.hidden = false;
-      wattHours.disabled = false;
-      aggContentObjects.hidden = true;
-      aggContent.disabled = true;  
+      /* makeupObjects */
 
     } else if (batteryType.value === "D" || batteryType.value === "E" || batteryType.value === "F") {  
-      wattHoursObjects.hidden = true;
-      wattHours.disabled = true;
-      aggContentObjects.hidden = false;
-      aggContent.disabled = false;  
+      /* makeupObjects */
 
     } else {  
-      wattHoursObjects.hidden = true;
-      wattHours.disabled = true;
-      aggContentObjects.hidden = true;
-      aggContent.disabled = true;  
-
+      makeupObjects.hidden = true;
+      
     };
 
   });
