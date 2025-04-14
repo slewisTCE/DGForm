@@ -39,17 +39,17 @@ const body = document.body;
 
 document.addEventListener('DOMContentLoaded', function() {
   
-  makeupTitle.innerText = "WATT Hours (per item):";
-
   batteryType.addEventListener('change', function() {
     if (batteryType.value === "A" || batteryType.value === "B" || batteryType.value === "C") {  
-      /* makeupObjects */
+      makeupObjects.hidden = false;
+      makeupTitle.innerText = "WATT Hours (per item):";
 
     } else if (batteryType.value === "D" || batteryType.value === "E" || batteryType.value === "F") {  
-      /* makeupObjects */
+      makeupObjects.hidden = false;
+      makeupTitle.innerText = "Content - Battery aggregate and Cell metal:";
 
     } else {  
-      /* makeupObjects.hidden = true; */
+      makeupObjects.hidden = true;
       
     };
 
