@@ -37,6 +37,9 @@ const body = document.body;
 // Weight and Cargo handler
 
 document.addEventListener('DOMContentLoaded', function() {
+  
+  document.querySelector("label[for='makeupTitle']").innerText = "WATT Hours (per item):";
+
   batteryType.addEventListener('change', function() {
     if (batteryType.value === "A" || batteryType.value === "B" || batteryType.value === "C") {  
       /* makeupObjects */
