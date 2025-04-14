@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
       /* makeupObjects */
 
     } else {  
-      makeupObjects.hidden = true;
+      /* makeupObjects.hidden = true; */
       
     };
 
