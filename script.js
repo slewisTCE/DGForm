@@ -43,19 +43,19 @@ document.addEventListener('DOMContentLoaded', function() {
     if (batteryType.value === "A" || batteryType.value === "B" || batteryType.value === "C") {  
       makeupObjects.hidden = false;
       makeupTitle.innerText = "WATT Hours (per item):";
-      clearSelectOptions("makeup")
-      const newOptions =[
+      clearSelectOptions("selectMakeup");
+      const newOptions = [
         { value: "", label: "Choose the appropriate Wh (Ah x V = Wh)"},
         { value: "A", label: "Battery ≤ 100 Wh / Cells ≤ 20 Wh"},
         { value: "B", label: "Battery > 100 Wh / Cells > 20 Wh"}
       ];
 
-      addSelectOptions("makeup", newOptions);
+      addSelectOptions("selectMakeup", newOptions);
 
     } else if (batteryType.value === "D" || batteryType.value === "E" || batteryType.value === "F") {  
       makeupObjects.hidden = false;
       makeupTitle.innerText = "Content - Battery aggregate and Cell metal:";
-      clearSelectOptions("makeup")
+      clearSelectOptions("selectMakeup");
 
     } else {  
       makeupObjects.hidden = true;
