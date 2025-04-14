@@ -18,6 +18,7 @@ const totalBox = document.getElementById("totalBox");
 const totalWeight_txt = document.getElementById("totalWeight_txt");
 const noticeBox = document.getElementById("noticeBox");
 const disclaimerBox = document.getElementById("disclaimerBox");
+const makeupTitle = document.getElementById("makeupTitle");
 
 const disclaimKey = document.getElementById("disclaimKey");
 const disclaim_A = document.getElementById("disclaim_A");
@@ -38,7 +39,7 @@ const body = document.body;
 
 document.addEventListener('DOMContentLoaded', function() {
   
-  document.querySelector("label[for='makeupTitle']").innerText = "WATT Hours (per item):";
+  makeupTitle.innerText = "WATT Hours (per item):";
 
   batteryType.addEventListener('change', function() {
     if (batteryType.value === "A" || batteryType.value === "B" || batteryType.value === "C") {  

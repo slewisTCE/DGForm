@@ -71,10 +71,7 @@ Lithium Content = (Ah per cell x 0.3 x no. of cells) OR (mAh / 1000 x 0.3 x no. 
     </select>
 
     <div id="makeupObjects">
-      <%
-        String makeupTitle = "holder";
-      %>
-      <label for="makeupTitle"><%= makeupTitle %></label>
+      <label for="makeup"><div id="makeupTitle">holder</div></label>
       <select id="makeup">
         <option value="">Choose the appropriate Wh (Ah x V = Wh)</option>
         <option value="A">Battery ≤ 100 Wh / Cells ≤ 20 Wh</option>
