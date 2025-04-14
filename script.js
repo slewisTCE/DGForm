@@ -50,6 +50,8 @@ document.addEventListener('DOMContentLoaded', function() {
         { value: "B", label: "Battery > 100 Wh / Cells > 20 Wh"}
       ];
 
+      addSelectOptions("makeup", newOptions);
+
     } else if (batteryType.value === "D" || batteryType.value === "E" || batteryType.value === "F") {  
       makeupObjects.hidden = false;
       makeupTitle.innerText = "Content - Battery aggregate and Cell metal:";
